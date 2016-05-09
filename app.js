@@ -34,11 +34,16 @@ $(".menu a").each(function(){
 
 });
 
+//GO BUTTON
 
-var $button = $("<button> Go </button>");
-$(".menu").append($button);
+// var $button = $("<button> Go </button>");
+// $(".menu").append($button);
 
-$button.click(function(){
+// $button.click(function(){
+// 	window.location = $select.val();
+
+// });
+
+$select.change(function(){
 	window.location = $select.val();
-
-});
+})
