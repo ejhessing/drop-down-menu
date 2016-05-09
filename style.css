@@ -1,0 +1,40 @@
+ul li {
+	list-style-type: none;
+	display: inline-block;
+	text-align: center;
+	width: 84px;
+
+}
+
+.menu {
+	padding: 0 5px 0;
+	height: 60px;
+	text-align: center;
+	background: navy;
+}
+
+ul li a {
+	color:white;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.page {
+	text-align: center;
+	margin: 40px 0 10px;
+}
+
+.selected {
+	background: white;
+}
+
+.selected a {
+		color:navy;
+		font-weight: bold;
+}
