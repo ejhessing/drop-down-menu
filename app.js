@@ -1,40 +1,45 @@
 // Create a drop down menu for mobile devices
 
+
 // Create a select and append to menu
-// Cycle over menu links
-	// Create an option
-	// Option's Value is the href
-	// Options Text is the text of link
-	// Append option to select
-//Create a button 
-	// bind click to go to select's location
-
-// Deal with selected options depending on current page
-
 var $select = $("<select></select>");
 $(".menu").append($select);
 
+// Cycle over menu links
 $(".menu a").each(function(){
 	var $anchor = $(this);
+	// Create an option	
 	var $option = $("<option></option>");
 
-
+// Deal with selected options depending on current page
 	if($anchor.parent().hasClass("selected")){
 		$option.prop("selected", true);
 	}
 
+	// Option's Value is the href
 	$option.val($anchor.attr("href"));
 
-	var anchorText = $anchor.text();
-	$option.text(anchorText);
+	// Options Text is the text of link
+	$option.text($anchor.text());
 
+	// Append option to select
 	$select.append($option);
-
-
 
 });
 
+
+
+$select.change(function(){
+	window.location = $select.val();
+})
+
+
+
+
 //GO BUTTON
+
+//Create a button 
+	// bind click to go to select's location
 
 // var $button = $("<button> Go </button>");
 // $(".menu").append($button);
@@ -43,7 +48,3 @@ $(".menu a").each(function(){
 // 	window.location = $select.val();
 
 // });
-
-$select.change(function(){
-	window.location = $select.val();
-})
