@@ -8,8 +8,7 @@
 	// Append option to select
 //Create a button 
 	// bind click to go to select's location
-//Modify CSS to hide links on small width and show button and select 
-	// Also hides select and button on larger width and shows links
+
 // Deal with selected options depending on current page
 
 var $select = $("<select></select>");
@@ -19,12 +18,19 @@ $(".menu a").each(function(){
 	var $anchor = $(this);
 	var $option = $("<option></option>");
 
+
+	if($anchor.parent().hasClass("selected")){
+		$option.prop("selected", true);
+	}
+
 	$option.val($anchor.attr("href"));
 
 	var anchorText = $anchor.text();
 	$option.text(anchorText);
 
 	$select.append($option);
+
+
 
 });
 
